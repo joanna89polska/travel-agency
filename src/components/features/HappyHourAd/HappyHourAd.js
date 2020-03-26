@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { formatTime } from '../../../utils/formatTime';
 
 class HappyHourAd extends React.Component {
   constructor() {
@@ -31,7 +32,7 @@ class HappyHourAd extends React.Component {
     return (
       <div>
         <h3 className={'title'}>{title}</h3>
-        <p className={'promoDescription'}>{countdownTime > 23 * 60 * 60 ? description : countdownTime}</p>
+        <p className={'promoDescription'}>{countdownTime > 23 * 60 * 60 ? description : formatTime(countdownTime)}</p>
       </div>
     );
   }
