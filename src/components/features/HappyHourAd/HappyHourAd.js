@@ -6,7 +6,6 @@ import { formatTime } from '../../../utils/formatTime';
 class HappyHourAd extends React.Component {
   constructor() {
     super();
-
     /* run this.forceUpdate() every second */
     setInterval(() => {this.forceUpdate();}, 1000);
   }
@@ -23,7 +22,6 @@ class HappyHourAd extends React.Component {
     if(CurrentDate.getUTCHours() >= 12){
       nextNoon.setUTCDate(CurrentDate.getUTCDate()+1);
     }
-
     return Math.round((nextNoon.getTime() - CurrentDate.getTime())/1000);
   }
 
@@ -38,4 +36,5 @@ class HappyHourAd extends React.Component {
     );
   }
 }
+
 export default HappyHourAd; 
